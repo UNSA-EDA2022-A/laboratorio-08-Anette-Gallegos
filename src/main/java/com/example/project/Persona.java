@@ -7,3 +7,4 @@ public class Persona {
         this.DNI = DNI;
         this.nombre = nombre;
     }
+}
