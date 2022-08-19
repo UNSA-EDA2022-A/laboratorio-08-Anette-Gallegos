@@ -1,5 +1,7 @@
 package com.example.project;
 
+import java.util.Objects;
+
 //import java.util.Random;
 
 public class HashLinearProbing{
@@ -34,7 +36,7 @@ public class HashLinearProbing{
         }
 
         for (int i = 0; i < hsize; i++) {
-            if (buckets[hash].nombre.equals(null) || buckets[hash].DNI.equals("disponible")) {
+            if (Objects.isNull(buckets[hash]) || buckets[hash].DNI.equals("disponible")) {
                 buckets[hash] = new Persona(wrappedPer.DNI,wrappedPer.nombre);
                 size++;
                 return;
@@ -58,7 +60,7 @@ public class HashLinearProbing{
         }
 
         for (int i = 0; i < hsize; i++) {
-            if (buckets[hash] != null && buckets[hash].DNI.equals(wrappedInt)) {
+            if (!Objects.isNull(buckets[hash]) && buckets[hash].DNI.equals(wrappedInt)) {
                 buckets[hash] = AVAILABLE;
                 size--;
                 return;
