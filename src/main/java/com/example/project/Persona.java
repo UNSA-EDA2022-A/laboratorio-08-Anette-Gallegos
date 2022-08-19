@@ -7,12 +7,3 @@ public class Persona {
         this.DNI = DNI;
         this.nombre = nombre;
     }
-    
-	public String getDNI() {
-		return DNI;
-	}
-
-	public String getNombre() {
-		return nombre;
-	}
-}
